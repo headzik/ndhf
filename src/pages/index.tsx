@@ -1,10 +1,25 @@
-import { Text } from '@nextui-org/react'
+import { Container } from '@nextui-org/react'
+import Image from 'next/image'
 
 
 export default function Home() {
   return (
-    <Text>
-      Hi
-    </Text>
+    <Container
+      css={{
+        justifyContent: 'center',
+        alignContent: 'center',
+        width: '100vw',
+        height: '100vh'
+      }}
+    >
+      <Image
+        src={'/underConstruction.png'}
+        alt={''}
+        fill
+        style={{
+          objectFit: 'contain'
+        }}
+      />
+    </Container>
   )
 }
