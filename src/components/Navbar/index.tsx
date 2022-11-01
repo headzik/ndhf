@@ -1,24 +1,32 @@
 import { Button, Link as NextUILink, Navbar as NextUINavbar } from '@nextui-org/react'
+import Color from 'color'
 import Logo from 'components/Logo'
 import Link from 'next/link'
+import { theme } from 'utils/theme'
 
 
 export default function Navbar() {
   const items = [
-    { name: 'Contact', link: '#' },
     { name: 'Mission', link: '#' },
     { name: 'About us', link: '#' },
+    { name: 'Contact us', link: '#' },
+    { name: 'Gallery', link: '#' },
   ]
   return (
     <NextUINavbar
+      variant='sticky'
+      maxWidth={'lg'}
       css={{
-        background: '$primaryLight',
+        '&.nextui-navbar': {
+          bg: Color(theme.colors.lightGreen500).alpha(0.5),
+          backdropFilter: 'saturate(180%) blur(10px)',
+        }
       }}
       containerCss={{
-        background: '$none',
+        $$navbarBlurBackgroundColor: 'none',
+        $$navbarBackgroundColor: 'none',
       }}
       disableBlur
-      variant='sticky'
     >
       <NextUINavbar.Brand>
         <Link href='/'>
@@ -30,17 +38,18 @@ export default function Navbar() {
       >
         {items.map(({ name, link }) => (
           <NextUINavbar.Link
+            block
             key={name}
-            href={link}
-            css={{ color: '$primaryDark' }}
+            href={'#'}
+            css={{ color: '$primaryDark', maxHeight: '50%' }}
           >
             {name}
           </NextUINavbar.Link>
         ))}
       </NextUINavbar.Content>
-      <NextUINavbar.Content>
+      <NextUINavbar.Content enableCursorHighlight>
         <Button
-          css={{ background: '$secondaryDark' }}
+          color='secondary'
           rounded
         >
           Donate
@@ -52,11 +61,10 @@ export default function Navbar() {
           <NextUINavbar.CollapseItem key={name}>
             <Link
               style={{ minWidth: '100%', }}
-              href={link}
+              href={'#'}
             >
               <NextUILink
                 color='primary'
-                block
                 css={{ minWidth: '100%', }}
               >
                 {name}

@@ -12,15 +12,15 @@ function MyApp({ Component, pageProps }: {
   return (
     <NextUIProvider theme={theme}>
       <Navbar />
-      <Container css={{
-        position: 'absolute',
-        top: 0,
-        // background: '$linearGradient',
-        minWidth: '100vw',
-        minHeight: '100vh',
-        opacity: 0.5
-      }}>
-        <Component {...pageProps} />
+      <Container
+        css={{
+          minWidth: '100vw',
+          minHeight: 'calc(100vh - 80px)',
+        }}
+      >
+        <Container lg>
+          <Component {...pageProps} />
+        </Container>
       </Container>
     </NextUIProvider>
   )
