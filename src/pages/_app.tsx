@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { NextUIProvider } from '@nextui-org/react'
+import { Container, NextUIProvider } from '@nextui-org/react'
+import Navbar from 'components/Navbar'
 import { FunctionComponent } from 'react'
+import { theme } from 'utils/theme'
 
 
 function MyApp({ Component, pageProps }: {
@@ -8,8 +10,18 @@ function MyApp({ Component, pageProps }: {
   pageProps: any
 }) {
   return (
-    <NextUIProvider>
-      <Component {...pageProps} />
+    <NextUIProvider theme={theme}>
+      <Navbar />
+      <Container css={{
+        position: 'absolute',
+        top: 0,
+        // background: '$linearGradient',
+        minWidth: '100vw',
+        minHeight: '100vh',
+        opacity: 0.5
+      }}>
+        <Component {...pageProps} />
+      </Container>
     </NextUIProvider>
   )
 }

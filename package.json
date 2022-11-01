@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.0-beta.10",
+    "@nextui-org/react": "1.0.0-beta.10",
     "@react-stately/collections": "^3.4.4",
     "@react-stately/menu": "^3.4.2",
     "next": "13.0.0",
