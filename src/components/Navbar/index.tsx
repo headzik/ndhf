@@ -1,16 +1,13 @@
 import { Button, Link as NextUILink, Navbar as NextUINavbar } from '@nextui-org/react'
-import Color from 'color'
 import Logo from 'components/Logo'
 import Link from 'next/link'
-import { theme } from 'utils/theme'
 
 
 export default function Navbar() {
   const items = [
-    { name: 'Mission', link: '#' },
-    { name: 'About us', link: '#' },
-    { name: 'Contact us', link: '#' },
-    { name: 'Gallery', link: '#' },
+    { name: 'Home', link: '#' },
+    { name: 'About', link: '#' },
+    { name: 'Contact', link: '#' },
   ]
   return (
     <NextUINavbar
@@ -18,7 +15,7 @@ export default function Navbar() {
       maxWidth={'lg'}
       css={{
         '&.nextui-navbar': {
-          bg: Color(theme.colors.lightGreen500).alpha(0.5),
+          bg: '$primary',
           backdropFilter: 'saturate(180%) blur(10px)',
         }
       }}
@@ -73,6 +70,6 @@ export default function Navbar() {
           </NextUINavbar.CollapseItem>
         ))}
       </NextUINavbar.Collapse>
-    </NextUINavbar >
+    </NextUINavbar>
   )
 }
