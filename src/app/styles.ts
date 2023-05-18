@@ -2,13 +2,13 @@ import clsx from "clsx";
 
 const main = clsx(
   'min-h-screen',
-  'flex flex-col items-center justify-center p-24'
+  'flex flex-col items-center',
 )
 
 const header = clsx(
-  'absolute w-full h-12 top-0 left-0 py-1 px-5',
+  'fixed w-full h-12 py-1 px-5',
   'flex justify-center',
-  'shadow-lg',
+  'z-50 shadow-lg bg-white/80 backdrop-blur-sm',
 )
 
 const headerContent = clsx(
