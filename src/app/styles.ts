@@ -20,9 +20,21 @@ const menu = clsx(
   'relative flex items-center'
 )
 
+const section = 'relative h-96 w-full mt-12'
+
+const lightText = 'text-gray-500 font-light'
+
+const missionColumn = "flex flex-col col-span-3 xs:col-span-1 gap-3"
+
+const missionImageContainer = clsx("relative w-full xs:h-[15vw] h-64")
+
 export const styles = {
   main,
   header,
   headerContent,
-  menu
+  menu,
+  section,
+  lightText,
+  missionColumn,
+  missionImageContainer
 }
