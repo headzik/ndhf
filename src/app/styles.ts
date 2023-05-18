@@ -6,9 +6,9 @@ const main = clsx(
 )
 
 const header = clsx(
-  'fixed w-full h-12 py-1 px-5',
+  'fixed w-screen h-12 py-1 px-5',
   'flex justify-center',
-  'z-50 shadow-lg bg-white/80 backdrop-blur-sm',
+  'z-50 shadow-md shadow-gray-500 bg-white/80 backdrop-blur-sm',
 )
 
 const headerContent = clsx(
@@ -20,7 +20,7 @@ const menu = clsx(
   'relative flex items-center'
 )
 
-const section = 'relative h-96 w-full mt-12'
+const section = clsx('relative flex justify-center h-auto w-full py-12')
 
 const lightText = 'text-gray-500 font-light'
 
