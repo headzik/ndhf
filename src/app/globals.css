@@ -12,6 +12,12 @@
     line-height: 1.1;
     @apply font-semibold
   }
+  h3 {
+    @apply text-xs;
+  }
+  h5 {
+    @apply text-xs;
+  }
   p {
     @apply text-[0.6rem]
   }

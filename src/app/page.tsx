@@ -59,7 +59,7 @@ export default function Home() {
       >
         <div className='flex flex-col items-center text-center w-4/5 gap-3'>
           <h1>Our mission</h1>
-          <p className={styles.lightText}>
+          <p className='text-gray-500'>
             We are committed to making a positive difference in the lives of those in need.<br />
             We provide shelter, food, education, and hope to individuals and families struggling
             with poverty.<br />
@@ -176,6 +176,44 @@ export default function Home() {
             someone to help me cook, buy food, and buy a bigger stove and necessary kitchen utensils. My biggest
             dream is to see the Foundation grow, to have my own place where I can build a shelter and help more kids out there.
           </p>
+        </div>
+      </section>
+
+      <section className={styles.section} id="donate">
+        <div className="container px-4 sm:px-16 mx-auto">
+          <div className="flex flex-col items-center gap-5">
+            <h1>Together we can make a change!</h1>
+            <p className='text-gray-500'>
+              {`We can change these children's lives and produce future leaders to make the world a better place.`}
+            </p>
+            <div className="flex justify-center items-center gap-10" >
+              <div className="flex-1 text-center">
+                <h2>Donate via GoGetFounding platform</h2>
+                <div className='w-[280px]'>
+                  <iframe
+                    src='https://gogetfunding.com/embed-widget2?campaignid=7645624&frame_type=t1'
+                    className='w-full h-[460px]'
+                    scrolling='no'
+                  >
+                  </iframe>
+                </div>
+              </div>
+              <div className="flex-1 text-center">
+                <h2 className='mb-5'>Bank transfer</h2>
+                <p>Recipient name</p>
+                <h2>The New Dawn Hope Foundation</h2>
+                <p>Account number</p>
+                <h2>ZA62798794254</h2>
+                <p>BIC</p>
+                <h2>FIRNZAJJXXX</h2>
+              </div>
+            </div>
+            <div className="row d-flex justify-content-center">
+              <div className="col-md-8 pb-80 header-text">
+                <h3>Thank you for being part of the New Dawn Hope Foundation. God bless you!</h3>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
