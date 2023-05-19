@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 import Image from 'next/image'
-import { Menu } from './components/Menu'
+import { Menu } from './components/Menu/Menu'
+import { MenuList } from './components/Menu/MenuList'
 import { styles } from './styles'
 
 
@@ -8,6 +9,17 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+
+      <div className='w-full h-screen fixed left-0 bottom-0'>
+        <Image
+          src="/banner.jpg"
+          alt="Banner"
+          priority
+          fill
+          className='object-cover'
+        />
+      </div>
+
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <a href="#home">
@@ -23,7 +35,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className='relative h-screen w-full' id="home">
+      <section className='relative h-screen w-full mt-20' id="home">
         <Image
           src="/banner.jpg"
           alt="Banner"
@@ -52,7 +64,7 @@ export default function Home() {
 
       <section className={clsx(
         styles.section,
-        'flex flex-col items-center gap-10'
+        'bg-white flex flex-col items-center gap-10'
       )}
         id="mission"
       >
@@ -132,7 +144,7 @@ export default function Home() {
             alt="Founder"
             width={200}
             height={200}
-            className='sm:float-left m-auto sm:m-3'
+            className='sm:float-left m-auto mb-3 sm:m-3'
           />
           <h2 className='text-white font-bold'>The founder</h2>
           <p className='text-gray-300 font-extralight'>
@@ -179,7 +191,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section} id="donate">
+      <section className={clsx(styles.section, 'bg-white')} id="donate">
         <div className="container px-4 sm:px-16 mx-auto">
           <div className="flex flex-col items-center gap-10 text-center">
             <div className='flex-1 flex flex-col items-center gap-5 text-center'>
@@ -213,6 +225,54 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className={
+        clsx(styles.section,
+          'bg-zinc-800/95',
+        )}
+        id="contact"
+      >
+        <div className="container flex items-center justify-center">
+          <div className='grid grid-cols-2 gap-10'>
+            <div className="text-white col-span-2 xs:col-span-1">
+              <h4>Contact</h4>
+              <p className='font-light'>
+                Busi Sithole<br />
+                Phone: <a className='text-blue-500 hover:text-blue-600' href="tel:+27835173097">+27835173097</a><br />
+                Email: <a className='text-blue-500 hover:text-blue-600' href="mailto:sithole.busi@gmail.com">sithole.busi@gmail.com</a>
+              </p>
+            </div>
+            <div className="text-white col-span-2 xs:col-span-1">
+              <h4>Please follow and share</h4>
+              <div className='flex mt-2 gap-5'>
+                <a href="https://www.facebook.com/newdawnhopefoundation" target="_blank">
+                  <Image width={40} height={40} src="/facebook.png" alt='Facebook' />
+                </a>
+                <a href="https://www.youtube.com/channel/UCPXepquWEQ62SoA-EqrndEA" target="_blank">
+                  <Image width={40} height={40} src="/youtube.png" alt='Facebook' />
+                </a>
+                <a href="https://www.instagram.com/newdawnhope_za/" target="_blank">
+                  <Image width={40} height={40} src="/instagram.png" alt='Facebook' />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className={clsx(
+        styles.section,
+        'bg-white'
+      )}>
+        <div className="container flex flex-col justify-center items-center gap-10">
+          <div className="flex justify-center gap-10 flex-wrap">
+            <MenuList />
+          </div>
+          <p>
+            {`Copyright ${new Date().getFullYear()} | All rights reserved`}
+          </p>
+        </div>
+      </footer>
     </main>
   )
 }

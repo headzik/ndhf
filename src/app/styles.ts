@@ -20,7 +20,7 @@ const menu = clsx(
   'relative flex items-center'
 )
 
-const section = clsx('relative flex justify-center h-auto w-full py-12')
+const section = clsx('relative flex justify-center h-auto w-full py-40')
 
 const lightText = 'text-gray-500 font-light'
 

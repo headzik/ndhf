@@ -3,20 +3,12 @@
 import clsx from "clsx"
 import Hamburger from "hamburger-react"
 import { useState } from "react"
-import { styles } from "../styles"
+import { styles } from "../../styles"
+import { MenuList } from "./MenuList"
 
 
 export function Menu() {
   const [isOpen, setOpen] = useState(false)
-
-  const List = () => (
-    <>
-      <a href="#home">Home</a>
-      <a href="#mission">Mission</a>
-      <a href="#about">About</a>
-      <a href="#donate">Donate</a>
-    </>
-  )
 
   return (
     <div className={styles.menu}>
@@ -24,7 +16,7 @@ export function Menu() {
         clsx("hidden gap-10 sm:flex")
       }
       >
-        <List />
+        <MenuList />
       </nav>
       <nav className={
         clsx(
@@ -33,7 +25,7 @@ export function Menu() {
         )
       }
       >
-        <List />
+        <MenuList />
       </nav>
       <div className="sm:hidden">
         <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
