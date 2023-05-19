@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   title: 'The New Dawn Hope Foundation',
   description: `Bringing new dawn for children's future`,
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
+    icon: '/logo-square.png',
+    shortcut: '/logo-square.png',
   },
   keywords: ['donation', 'donate', 'foundation', 'new dawn', 'hope', 'children']
 }
