@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import Image from 'next/image'
 import { Menu } from './components/Menu/Menu'
-import { MenuList } from './components/Menu/MenuList'
+import { MenuList, MenuListItem } from './components/Menu/MenuList'
 import { styles } from './styles'
 
 
@@ -54,10 +54,12 @@ export default function Home() {
             <h1 className='text-white font-bold lg:text-7xl'>
               {`Bringing new dawn for children's future.`}
             </h1>
-            <a href="#project"
-              className="bg-white py-2 px-5 rounded-full uppercase max-w-fit">
+            <MenuListItem
+              className="bg-white py-2 px-5 rounded-full uppercase max-w-fit"
+              linkTo='mission'
+            >
               Learn more
-            </a>
+            </MenuListItem>
           </div>
         </div>
       </section>
