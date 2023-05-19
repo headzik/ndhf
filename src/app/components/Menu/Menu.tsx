@@ -11,19 +11,17 @@ export function Menu() {
   const [isOpen, setOpen] = useState(false)
 
   return (
-    <div className={styles.menu}>
-      <nav className={
-        clsx("hidden gap-10 sm:flex")
-      }
-      >
+    <div className={styles.menu} onBlur={() => setOpen(false)}>
+      <nav className={clsx("hidden gap-10 sm:flex")}>
         <MenuList />
       </nav>
-      <nav className={
-        clsx(
-          "sm:hidden absolute right-[15px] top-[30px] flex flex-col gap-2 bg-white/90 backdrop-blur-lg p-2 rounded-md duration-200 transition-all",
+      <nav
+        className={clsx(
+          "sm:hidden absolute -right-5 top-20 w-32",
+          "bg-white/90 backdrop-blur-lg",
+          "flex flex-col gap-2 p-2 items-center rounded-md duration-200 transition-all",
           isOpen ? 'opacity-1' : 'opacity-0'
-        )
-      }
+        )}
       >
         <MenuList />
       </nav>

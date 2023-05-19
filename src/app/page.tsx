@@ -68,7 +68,7 @@ export default function Home() {
       )}
         id="mission"
       >
-        <div className='flex flex-col items-center text-center w-4/5 gap-3'>
+        <div className='flex flex-col items-center text-center w-4/5 gap-3 mb-20'>
           <h1>Our mission</h1>
           <p className={styles.lightText}>
             We are committed to making a positive difference in the lives of those in need.<br />
@@ -77,7 +77,7 @@ export default function Home() {
             Join us in our mission to create a brighter future for all.
           </p>
         </div>
-        <div className='container px-4 sm:px-14 grid grid-cols-3 gap-5'>
+        <div className='container px-4 sm:px-14 grid grid-cols-3 gap-10'>
 
           <div className={styles.missionColumn}>
             <div className={styles.missionImageContainer}>
@@ -164,7 +164,7 @@ export default function Home() {
             title="New Dawn Hope Foundation"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className='lg:float-right sm:w-[480px] w-full sm:m-auto lg:mx-3'
+            className='lg:float-right sm:w-[480px] w-full sm:m-auto lg:mx-3 mt-3'
           />
           <h2 className='text-white font-bold mt-3'>History</h2>
           <p className='text-gray-300 font-extralight'>

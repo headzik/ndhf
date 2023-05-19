@@ -1,11 +1,31 @@
+'use client'
+
+import { MouseEvent } from "react"
+
+
 export function MenuList() {
+
+  const list = [
+    'home', 'mission', 'about', 'donate', 'contact'
+  ]
+
+  const scrollSmoothly = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+    let element = document.getElementById(id)
+    event.preventDefault()
+    element && element.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+
   return (
     <>
-      <a href="#home">Home</a>
-      <a href="#mission">Mission</a>
-      <a href="#about">About</a>
-      <a href="#donate">Donate</a>
-      <a href="#contact">Contact</a>
+      {list.map((name) =>
+        <a
+          key={name}
+          onClick={(event) => scrollSmoothly(event, name)}
+          href={`#${name}`}
+        >
+          {name.toUpperCase()}
+        </a>
+      )}
     </>
   )
 }
