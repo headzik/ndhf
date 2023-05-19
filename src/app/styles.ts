@@ -6,13 +6,13 @@ const main = clsx(
 )
 
 const header = clsx(
-  'fixed w-screen h-12 py-1 px-5',
+  'fixed w-screen h-20 py-1 px-5',
   'flex justify-center',
   'z-50 shadow-md shadow-gray-500 bg-white/80 backdrop-blur-sm',
 )
 
 const headerContent = clsx(
-  'w-full max-w-3xl',
+  'w-full max-w-6xl',
   'flex flex-row justify-between',
 )
 

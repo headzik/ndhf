@@ -11,24 +11,24 @@ export function Menu() {
 
   const List = () => (
     <>
-      <a className='text-sm' href="#home">Home</a>
-      <a className='text-sm' href="#mission">Mission</a>
-      <a className='text-sm' href="#about">About</a>
-      <a className='text-sm' href="#donate">Donate</a>
+      <a href="#home">Home</a>
+      <a href="#mission">Mission</a>
+      <a href="#about">About</a>
+      <a href="#donate">Donate</a>
     </>
   )
 
   return (
     <div className={styles.menu}>
       <nav className={
-        clsx("hidden gap-2 sm:flex")
+        clsx("hidden gap-10 sm:flex")
       }
       >
         <List />
       </nav>
       <nav className={
         clsx(
-          "sm:hidden absolute right-[15px] top-[30px] flex flex-col gap-2 bg-white/80 backdrop-blur-lg p-2 rounded-md duration-200 transition-all",
+          "sm:hidden absolute right-[15px] top-[30px] flex flex-col gap-2 bg-white/90 backdrop-blur-lg p-2 rounded-md duration-200 transition-all",
           isOpen ? 'opacity-1' : 'opacity-0'
         )
       }

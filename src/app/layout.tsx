@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: ['donation', 'donate', 'foundation', 'new dawn', 'hope', 'children']
 }
 
-const poppins = Poppins({ weight: ['600', '500', '300'], subsets: ['latin'] })
+const poppins = Poppins({ weight: ['700', '600', '500', '300'], subsets: ['latin'] })
 
 export default function RootLayout({
   children,
