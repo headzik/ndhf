@@ -21,7 +21,7 @@ export function MenuListItem({
   return (
     <a
       onClick={(event) => scrollSmoothly(event, linkTo)}
-      href={`#${name}`}
+      href={`#${linkTo}`}
       className={className}
     >
       {children || linkTo.toUpperCase()}
